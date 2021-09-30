@@ -44,6 +44,8 @@ namespace CashV2
             this.totalOutputLabel = new System.Windows.Forms.Label();
             this.taxOutputLabel = new System.Windows.Forms.Label();
             this.subTotalOutput = new System.Windows.Forms.Label();
+            this.tenderedLabel = new System.Windows.Forms.Label();
+            this.tenderedInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // totalLabel
@@ -177,12 +179,31 @@ namespace CashV2
             this.subTotalOutput.TabIndex = 24;
             this.subTotalOutput.Text = "subTotalOutputLabel";
             // 
+            // tenderedLabel
+            // 
+            this.tenderedLabel.AutoSize = true;
+            this.tenderedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tenderedLabel.Location = new System.Drawing.Point(7, 418);
+            this.tenderedLabel.Name = "tenderedLabel";
+            this.tenderedLabel.Size = new System.Drawing.Size(77, 20);
+            this.tenderedLabel.TabIndex = 25;
+            this.tenderedLabel.Text = "Tendered";
+            // 
+            // tenderedInput
+            // 
+            this.tenderedInput.Location = new System.Drawing.Point(196, 418);
+            this.tenderedInput.Name = "tenderedInput";
+            this.tenderedInput.Size = new System.Drawing.Size(71, 20);
+            this.tenderedInput.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 626);
+            this.Controls.Add(this.tenderedInput);
+            this.Controls.Add(this.tenderedLabel);
             this.Controls.Add(this.subTotalOutput);
             this.Controls.Add(this.taxOutputLabel);
             this.Controls.Add(this.totalOutputLabel);
@@ -221,6 +242,8 @@ namespace CashV2
         private System.Windows.Forms.Label totalOutputLabel;
         private System.Windows.Forms.Label taxOutputLabel;
         private System.Windows.Forms.Label subTotalOutput;
+        private System.Windows.Forms.Label tenderedLabel;
+        private System.Windows.Forms.TextBox tenderedInput;
     }
 }
 

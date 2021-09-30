@@ -26,6 +26,8 @@ namespace CashV2
         double tax;
         double taxRate = 0.13;
 
+        double tendered; 
+
         public Form1()
         {
             InitializeComponent();
@@ -39,11 +41,11 @@ namespace CashV2
 
             subTotal = numOfSlicesDesired * slices + numOfBreadSticksDesired * breadSticks + numOfDrinksDesired * drinks;
             tax = subTotal * taxRate;
-            total = numOfSlicesDesired + numOfBreadSticksDesired + numOfDrinksDesired + tax;
+            total = subTotal + tax;
             
-            subTotalOutput.Text = $"{subTotal}";
-            taxOutputLabel.Text = $"{tax}";
-            totalOutputLabel.Text = $"{total}";
+            subTotalOutput.Text = $"{subTotal.ToString("C")}";
+            taxOutputLabel.Text = $"{tax.ToString("C")}";
+            totalOutputLabel.Text = $"{total.ToString("C")}";
 
 
         }
