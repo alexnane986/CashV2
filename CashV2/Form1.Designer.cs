@@ -46,6 +46,12 @@ namespace CashV2
             this.subTotalOutput = new System.Windows.Forms.Label();
             this.tenderedLabel = new System.Windows.Forms.Label();
             this.tenderedInput = new System.Windows.Forms.TextBox();
+            this.changeButton = new System.Windows.Forms.Button();
+            this.changeLabel = new System.Windows.Forms.Label();
+            this.changeOutputLabel = new System.Windows.Forms.Label();
+            this.receiptButton = new System.Windows.Forms.Button();
+            this.receiptOutput = new System.Windows.Forms.Label();
+            this.newOrderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // totalLabel
@@ -155,9 +161,8 @@ namespace CashV2
             this.totalOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.totalOutputLabel.Location = new System.Drawing.Point(192, 335);
             this.totalOutputLabel.Name = "totalOutputLabel";
-            this.totalOutputLabel.Size = new System.Drawing.Size(128, 20);
+            this.totalOutputLabel.Size = new System.Drawing.Size(0, 20);
             this.totalOutputLabel.TabIndex = 22;
-            this.totalOutputLabel.Text = "totalOutputLabel";
             // 
             // taxOutputLabel
             // 
@@ -165,9 +170,8 @@ namespace CashV2
             this.taxOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.taxOutputLabel.Location = new System.Drawing.Point(192, 298);
             this.taxOutputLabel.Name = "taxOutputLabel";
-            this.taxOutputLabel.Size = new System.Drawing.Size(118, 20);
+            this.taxOutputLabel.Size = new System.Drawing.Size(0, 20);
             this.taxOutputLabel.TabIndex = 23;
-            this.taxOutputLabel.Text = "taxOutputLabel";
             // 
             // subTotalOutput
             // 
@@ -175,9 +179,8 @@ namespace CashV2
             this.subTotalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.subTotalOutput.Location = new System.Drawing.Point(192, 262);
             this.subTotalOutput.Name = "subTotalOutput";
-            this.subTotalOutput.Size = new System.Drawing.Size(158, 20);
+            this.subTotalOutput.Size = new System.Drawing.Size(0, 20);
             this.subTotalOutput.TabIndex = 24;
-            this.subTotalOutput.Text = "subTotalOutputLabel";
             // 
             // tenderedLabel
             // 
@@ -196,12 +199,78 @@ namespace CashV2
             this.tenderedInput.Size = new System.Drawing.Size(71, 20);
             this.tenderedInput.TabIndex = 26;
             // 
+            // changeButton
+            // 
+            this.changeButton.Location = new System.Drawing.Point(49, 454);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(190, 22);
+            this.changeButton.TabIndex = 27;
+            this.changeButton.Text = "Calculate Change";
+            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
+            // 
+            // changeLabel
+            // 
+            this.changeLabel.AutoSize = true;
+            this.changeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.changeLabel.Location = new System.Drawing.Point(7, 502);
+            this.changeLabel.Name = "changeLabel";
+            this.changeLabel.Size = new System.Drawing.Size(65, 20);
+            this.changeLabel.TabIndex = 28;
+            this.changeLabel.Text = "Change";
+            // 
+            // changeOutputLabel
+            // 
+            this.changeOutputLabel.AutoSize = true;
+            this.changeOutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.changeOutputLabel.Location = new System.Drawing.Point(192, 502);
+            this.changeOutputLabel.Name = "changeOutputLabel";
+            this.changeOutputLabel.Size = new System.Drawing.Size(0, 20);
+            this.changeOutputLabel.TabIndex = 29;
+            // 
+            // receiptButton
+            // 
+            this.receiptButton.Location = new System.Drawing.Point(49, 560);
+            this.receiptButton.Name = "receiptButton";
+            this.receiptButton.Size = new System.Drawing.Size(190, 22);
+            this.receiptButton.TabIndex = 30;
+            this.receiptButton.Text = "Print Receipt";
+            this.receiptButton.UseVisualStyleBackColor = true;
+            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
+            // 
+            // receiptOutput
+            // 
+            this.receiptOutput.AutoSize = true;
+            this.receiptOutput.BackColor = System.Drawing.Color.White;
+            this.receiptOutput.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptOutput.Location = new System.Drawing.Point(409, 117);
+            this.receiptOutput.Name = "receiptOutput";
+            this.receiptOutput.Size = new System.Drawing.Size(0, 18);
+            this.receiptOutput.TabIndex = 31;
+            this.receiptOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // newOrderButton
+            // 
+            this.newOrderButton.Location = new System.Drawing.Point(412, 560);
+            this.newOrderButton.Name = "newOrderButton";
+            this.newOrderButton.Size = new System.Drawing.Size(190, 22);
+            this.newOrderButton.TabIndex = 32;
+            this.newOrderButton.Text = "New Order";
+            this.newOrderButton.UseVisualStyleBackColor = true;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 626);
+            this.ClientSize = new System.Drawing.Size(655, 626);
+            this.Controls.Add(this.newOrderButton);
+            this.Controls.Add(this.receiptOutput);
+            this.Controls.Add(this.receiptButton);
+            this.Controls.Add(this.changeOutputLabel);
+            this.Controls.Add(this.changeLabel);
+            this.Controls.Add(this.changeButton);
             this.Controls.Add(this.tenderedInput);
             this.Controls.Add(this.tenderedLabel);
             this.Controls.Add(this.subTotalOutput);
@@ -244,6 +313,12 @@ namespace CashV2
         private System.Windows.Forms.Label subTotalOutput;
         private System.Windows.Forms.Label tenderedLabel;
         private System.Windows.Forms.TextBox tenderedInput;
+        private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Label changeLabel;
+        private System.Windows.Forms.Label changeOutputLabel;
+        private System.Windows.Forms.Button receiptButton;
+        private System.Windows.Forms.Label receiptOutput;
+        private System.Windows.Forms.Button newOrderButton;
     }
 }
 
